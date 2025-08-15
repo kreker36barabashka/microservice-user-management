@@ -16,3 +16,6 @@ services:
     image: mongo
     ports:
       - '27017:27017'
+
+# Version history:
+# - version: 3.8, initial version
