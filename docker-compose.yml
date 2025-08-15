@@ -1,6 +1,7 @@
 version: '3.8'
 
 services:
+  # User service for managing users
   user-service:
     build:
       context: ./user-service
@@ -10,6 +11,7 @@ services:
       - MONGO_URI=mongodb://mongo:27017/user_management
     depends_on:
       - mongo
+  # MongoDB service for data storage
   mongo:
     image: mongo
     ports:
