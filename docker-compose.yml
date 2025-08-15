@@ -21,6 +21,7 @@ services:
     image: mongo
     ports:
       - '27017:27017'
+    # MongoDB service for persisting user data and handling database operations
 
 # Version history:
 # - version: 3.8, initial version
