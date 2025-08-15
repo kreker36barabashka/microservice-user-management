@@ -22,6 +22,11 @@ services:
     ports:
       - '27017:27017'
     # MongoDB service for persisting user data and handling database operations
+    healthcheck:
+      test: [ 'CMD', 'mongo', '--eval', 'db.runCommand({ ping: 1 })' ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
 
 # Version history:
 # - version: 3.8, initial version
