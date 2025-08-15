@@ -8,7 +8,7 @@ services:
     ports:
       - '3000:3000'
     environment:
-      - MONGO_URI=mongodb://mongo:27017/user_management
+      - MONGO_URI=mongodb://mongo:27017/user_management # URI for MongoDB connection
     depends_on:
       - mongo
     healthcheck:
